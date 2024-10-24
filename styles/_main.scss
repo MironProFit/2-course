@@ -1,0 +1,221 @@
+.header {
+    max-width: 1440px;
+    max-height: 800px;
+    background-image: url('../img/hero_img.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.header__hero {
+    padding-top: 196px;
+    max-width: 769px;
+    height: 750px;
+    .hero {
+        &__title {
+            margin: 0;
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 78px;
+            padding-bottom: 24px;
+            }
+
+        &__desc {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 32px;
+            padding-bottom: 48px;
+                &-selection {
+                    font-weight: 600;
+                }
+            }
+        &__button {
+            margin-bottom: 156px;
+            @include btn-dark;
+        }
+    }
+}
+
+.games-info {
+    max-width: 1440px;
+    background-image: url('../img/game_desc.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    &__title {
+        margin: 0;
+        padding-top: 94px;
+        padding-bottom: 24px;
+        color: $light;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 78px;
+        text-align: left;
+    }
+    &__subtitle {
+        margin: 0;
+        width: 788px;
+        padding-bottom: 72px;
+        color: $light;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        text-align: left;
+    }
+        .games-list {
+            max-height: 1060px;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(24, 1fr);
+            gap: 32px;
+            .item-5 {
+                order: 5;
+            }
+            .big-item {
+                grid-row: span 13;
+            }
+            .small-item {
+                grid-row: span 11;
+            }
+            .games-item {
+                display: flex;
+                flex-direction: column;
+                grid-column: span 4;
+                background-color: $light;
+                border-radius: 30px;
+                 @include anim-scale;
+
+                &__img {
+                    border-radius: 30px;
+                    border-radius: 30px;
+                    height: 314px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                
+
+                &__num {
+                    width: 110px;
+                    height: 36px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 52.58px;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 110%;
+                    text-align: left;
+                    background-color: $dark-light;
+                    margin-top:32px;
+                    margin-left: 32px;
+                    margin-bottom: 16px;
+                }
+                &__title {
+                    padding: 0 36px 32px;
+                    font-size: 32px;
+                    font-weight: 700;
+                    line-height: 39px;
+                    text-align: left;
+                }
+            }
+
+        }
+    }
+    .games-gallery {
+        max-width: 1440px;
+        max-height: 3500px;
+        background-image: url('../img/game_gallery.jpeg');
+        background-repeat: no-repeat;
+        background-position: center; 
+        padding-bottom: 144px;
+        .games-gallery__title {
+            margin: 0;
+            padding-top: 96px;
+            padding-bottom: 72px;
+            color: $light;
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 78px;
+            text-align: left;
+        }
+        .games-gallery__catalog {
+            margin-bottom: 32px;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            max-width: 1200px;
+            max-height: 500px;
+            background-color: $light;
+            border-radius: 30px;
+            
+            
+           
+            .catalog-item { 
+                padding-left: 48px;
+                padding-top: 48px;
+                grid-column: span 6;
+                // display: flex;
+                // flex-direction: column;
+                
+
+                .catalog-item__title {
+                    margin-top: 48px;
+                    margin-bottom: 24px;
+                    font-size: 48px;
+                    font-weight: 700;
+                    line-height: 59px;
+                    text-align: left;
+                }
+                .catalog-item__subtitle {
+                    margin-bottom: 36px;
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: 32px;
+                    text-align: left;
+                }
+                .catalog-item__btn {
+                    @include btn-dark;
+                    margin-bottom: 84px;
+                }
+            }
+                .catalog-img {
+                    display: flex;
+                    grid-column: span 6;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 30px;
+                    }
+        }
+        .games-gallery__catalog:nth-child(odd) .catalog-item{
+                order: 1;
+            }
+            .games-gallery__catalog:last-child {
+                margin-bottom: unset;
+            }
+            
+            
+        }
+
+.footer {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: $accent-dark;
+    max-width: 1440px;
+    height: 150px;
+    &__text {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29px;
+        text-align: center;
+
+    }
+}
+    
+   
+    
+    
+   
+
+
