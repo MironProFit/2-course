@@ -1,12 +1,14 @@
 @media (max-width: 768px) {
     body { 
         overflow-x: hidden;
-    .center {
+    
+}
+
+.center {
         padding-right: 16px;
         padding-left: 16px;
     }
-}
-
+    
 .header {
     max-width: 1440px;
     max-height: 800px;
