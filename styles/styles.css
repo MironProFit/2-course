@@ -165,7 +165,7 @@
   order: 5;
 }
 .games-info .games-list .big-item {
-  grid-row: span 13;
+  grid-row: span 12;
 }
 .games-info .games-list .small-item {
   grid-row: span 11;
