@@ -17,7 +17,22 @@
     background-size: cover;
     background-position: center; 
 }
-
+.tag {
+    height: 51px;
+    &__wrapper {
+        height: 51px;
+    }
+    &__text {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 110%;
+        &::before {
+            background-size: cover;
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
 .games-info {
     display: none;
 }    
@@ -25,12 +40,14 @@
 .header__hero {
     padding-top: 147px;
     max-width: 769px;
-    max-height: 650px;
+    max-height: 610px;
     display: flex;
     flex-direction: column;
     .hero {
         &__title {
-            margin: 0;
+            margin: 0 auto;
+            width: 262px;
+            height: 196px;
             font-size: 40px;
             font-weight: 700;
             line-height: 49px;
@@ -38,19 +55,25 @@
             }
 
         &__desc {
+            margin: 0 auto;
+            width: 296px;
+            height: 60px;
             font-size: 16px;
             font-weight: 400;
             line-height: 20px;
             text-align: center;
-            padding-bottom: 48px;
+            padding-bottom: 38px;
                 &-selection {
                     font-weight: 600;
                 }
             }
         &__button {
             margin-bottom: 156px;
-            margin: auto;
+            margin: 0 auto;
             @include btn-dark;
+            
+
+
         }
     }
 }
@@ -88,29 +111,29 @@
             .catalog-item__title {
                 margin-top: 30px;
                 margin-bottom: 16px;
-                font-size: 48px;
+                font-size: 32px;
                 font-weight: 700;
-                line-height: 59px;
+                line-height: 39px;
                 text-align: left;
             }
             .catalog-item__subtitle {
                 margin-bottom: 32px;
-                font-size: 24px;
+                font-size: 16px;
                 font-weight: 400;
-                line-height: 32px;
+                line-height: 20px;
                 text-align: left;
             }
             .catalog-item__btn {
                 margin: auto;
                 margin-bottom: 32px;
                 @include btn-dark;
-                width: 288px;
-                height: 66px;
+                
             }
         }
             .catalog-img {
                 grid-row: span 1;
                 height: 284px;
+                width: 100%;
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;

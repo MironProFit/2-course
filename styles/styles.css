@@ -74,6 +74,58 @@
   background-color: #fff;
   color: #202027;
 }
+@media (max-width: 768px) {
+  .header__hero .hero__button {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 141.69%;
+    max-width: 285px;
+    height: 55px;
+  }
+}
+
+.tag {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  gap: 138px;
+  animation: move-left 30s infinite linear;
+}
+.tag__wrapper {
+  background-color: #BCEC30;
+  max-width: 1440px;
+  height: 90px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.tag__text {
+  width: 100%;
+  position: relative;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 110%;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+.tag__text::before {
+  position: absolute;
+  content: "";
+  background-image: url(../img/star.svg);
+  width: 36px;
+  height: 36px;
+  top: 0;
+  left: -82px;
+}
+@keyframes move-left {
+  0% {
+    transform: translate(100%, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
 
 .games-info {
   max-width: 1440px;
@@ -224,6 +276,15 @@
   background-color: #fff;
   color: #202027;
 }
+@media (max-width: 768px) {
+  .games-gallery .games-gallery__catalog .catalog-item .catalog-item__btn {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 141.69%;
+    max-width: 285px;
+    height: 55px;
+  }
+}
 .games-gallery .games-gallery__catalog .catalog-img {
   display: flex;
   grid-column: span 6;
@@ -264,6 +325,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 body a {
   text-decoration: none;
@@ -291,36 +353,57 @@ body a {
     background-size: cover;
     background-position: center;
   }
+  .tag {
+    height: 51px;
+  }
+  .tag__wrapper {
+    height: 51px;
+  }
+  .tag__text {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 110%;
+  }
+  .tag__text::before {
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+  }
   .games-info {
     display: none;
   }
   .header__hero {
     padding-top: 147px;
     max-width: 769px;
-    max-height: 650px;
+    max-height: 610px;
     display: flex;
     flex-direction: column;
   }
   .header__hero .hero__title {
-    margin: 0;
+    margin: 0 auto;
+    width: 262px;
+    height: 196px;
     font-size: 40px;
     font-weight: 700;
     line-height: 49px;
     text-align: center;
   }
   .header__hero .hero__desc {
+    margin: 0 auto;
+    width: 296px;
+    height: 60px;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
     text-align: center;
-    padding-bottom: 48px;
+    padding-bottom: 38px;
   }
   .header__hero .hero__desc-selection {
     font-weight: 600;
   }
   .header__hero .hero__button {
     margin-bottom: 156px;
-    margin: auto;
+    margin: 0 auto;
     background-color: #202027;
     color: #fff;
     border-radius: 60px;
@@ -335,6 +418,17 @@ body a {
     background-color: #fff;
     color: #202027;
   }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  .header__hero .hero__button {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 141.69%;
+    max-width: 285px;
+    height: 55px;
+  }
+}
+@media (max-width: 768px) {
   .games-gallery {
     max-width: unset;
     max-height: unset;
@@ -369,16 +463,16 @@ body a {
   .games-gallery .games-gallery__catalog .catalog-item .catalog-item__title {
     margin-top: 30px;
     margin-bottom: 16px;
-    font-size: 48px;
+    font-size: 32px;
     font-weight: 700;
-    line-height: 59px;
+    line-height: 39px;
     text-align: left;
   }
   .games-gallery .games-gallery__catalog .catalog-item .catalog-item__subtitle {
     margin-bottom: 32px;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 32px;
+    line-height: 20px;
     text-align: left;
   }
   .games-gallery .games-gallery__catalog .catalog-item .catalog-item__btn {
@@ -393,16 +487,26 @@ body a {
     font-weight: 600;
     width: 247px;
     height: 66px;
-    width: 288px;
-    height: 66px;
   }
   .games-gallery .games-gallery__catalog .catalog-item .catalog-item__btn:hover {
     background-color: #fff;
     color: #202027;
   }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  .games-gallery .games-gallery__catalog .catalog-item .catalog-item__btn {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 141.69%;
+    max-width: 285px;
+    height: 55px;
+  }
+}
+@media (max-width: 768px) {
   .games-gallery .games-gallery__catalog .catalog-img {
     grid-row: span 1;
     height: 284px;
+    width: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

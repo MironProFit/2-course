@@ -12,6 +12,13 @@
         background-color: $light;
         color: $dark;
     }
+    @media (max-width: 768px) {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 141.69%;
+        max-width: 285px;
+        height: 55px;
+    }
 }
 @mixin anim-scale {
     transition: 0.5s;

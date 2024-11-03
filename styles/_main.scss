@@ -35,6 +35,52 @@
     }
 }
 
+.tag {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    gap: 138px;
+    animation: move-left 30s infinite linear;
+    
+    &__wrapper {
+        background-color: $accent-dark;
+        max-width: 1440px;
+        height: 90px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+&__text {
+    width: 100%;
+    position: relative;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 110%;
+    white-space: nowrap;
+    text-transform: uppercase;
+    &::before {
+        position: absolute;
+        content: '';
+        background-image: url(../img/star.svg);
+        width: 36px;
+        height: 36px;
+        top: 0;
+        left: -82px;
+    }
+}
+@keyframes move-left {
+    0% {
+        transform: translate(100%, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+    
+}
+}
+
 .games-info {
     max-width: 1440px;
     background-image: url('../img/game_desc.jpeg');
