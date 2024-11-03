@@ -50,7 +50,11 @@
         &__button {
             margin-bottom: 156px;
             margin: auto;
+            font-size: 16px;
+            font-weight: 600;
             @include btn-dark;
+            width: 285px;
+            height: 55px;
         }
     }
 }
@@ -76,7 +80,7 @@
         grid-template-columns: unset;
         max-height: unset;
         max-width: unset;
-       
+               
         .catalog-item { 
             margin-left: 28px;
             margin-right: 28px;
@@ -88,16 +92,16 @@
             .catalog-item__title {
                 margin-top: 30px;
                 margin-bottom: 16px;
-                font-size: 48px;
+                font-size: 32px;
                 font-weight: 700;
-                line-height: 59px;
+                line-height: 39px;
                 text-align: left;
             }
             .catalog-item__subtitle {
                 margin-bottom: 32px;
-                font-size: 24px;
+                font-size: 16px;
                 font-weight: 400;
-                line-height: 32px;
+                line-height: 20px;
                 text-align: left;
             }
             .catalog-item__btn {

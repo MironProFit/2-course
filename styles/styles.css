@@ -321,6 +321,8 @@ body a {
   .header__hero .hero__button {
     margin-bottom: 156px;
     margin: auto;
+    font-size: 16px;
+    font-weight: 600;
     background-color: #202027;
     color: #fff;
     border-radius: 60px;
@@ -330,6 +332,8 @@ body a {
     font-weight: 600;
     width: 247px;
     height: 66px;
+    width: 285px;
+    height: 55px;
   }
   .header__hero .hero__button:hover {
     background-color: #fff;
@@ -369,16 +373,16 @@ body a {
   .games-gallery .games-gallery__catalog .catalog-item .catalog-item__title {
     margin-top: 30px;
     margin-bottom: 16px;
-    font-size: 48px;
+    font-size: 32px;
     font-weight: 700;
-    line-height: 59px;
+    line-height: 39px;
     text-align: left;
   }
   .games-gallery .games-gallery__catalog .catalog-item .catalog-item__subtitle {
     margin-bottom: 32px;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 32px;
+    line-height: 20px;
     text-align: left;
   }
   .games-gallery .games-gallery__catalog .catalog-item .catalog-item__btn {
