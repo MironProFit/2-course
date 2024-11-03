@@ -174,7 +174,7 @@
         background-repeat: no-repeat;
         background-position: center; 
         padding-bottom: 144px;
-        .games-gallery__title {
+        &__title {
             margin: 0;
             padding-top: 96px;
             padding-bottom: 72px;
@@ -184,7 +184,7 @@
             line-height: 78px;
             text-align: left;
         }
-        .games-gallery__catalog {
+        &__catalog {
             margin-bottom: 32px;
             display: grid;
             grid-template-columns: repeat(12, 1fr);
@@ -203,7 +203,7 @@
                 // flex-direction: column;
                 
 
-                .catalog-item__title {
+                &__title {
                     margin-top: 48px;
                     margin-bottom: 24px;
                     font-size: 48px;
@@ -211,14 +211,14 @@
                     line-height: 59px;
                     text-align: left;
                 }
-                .catalog-item__subtitle {
+                &__subtitle {
                     margin-bottom: 36px;
                     font-size: 24px;
                     font-weight: 400;
                     line-height: 32px;
                     text-align: left;
                 }
-                .catalog-item__btn {
+                &__btn {
                     @include btn-dark;
                     margin-bottom: 84px;
                 }
@@ -232,12 +232,12 @@
                     border-radius: 30px;
                     }
         }
-        .games-gallery__catalog:nth-child(odd) .catalog-item{
+        &__catalog:nth-child(odd) .catalog-item{
                 order: 1;
-            }
-            .games-gallery__catalog:last-child {
-                margin-bottom: unset;
-            }
+        }
+        &__catalog:last-child {
+            margin-bottom: unset;
+        }
             
             
         }
