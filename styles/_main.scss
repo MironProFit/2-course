@@ -80,12 +80,22 @@
     
 }
 }
+.gams-conteiner {
+    background: $dark;
+    width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    background-image: url(../img/stars-about.svg);
+    background-size: 108% 110%;
+    background-repeat: no-repeat;
+    background-position: 32px -310px;
+    
 
+}
 .games-info {
     max-width: 1440px;
-    background-image: url('../img/game_desc.jpeg');
-    background-repeat: no-repeat;
-    background-position: center;
+
+    
     &__title {
         margin: 0;
         padding-top: 94px;
@@ -167,14 +177,22 @@
 
         }
     }
+    .gallery-conteiner {
+        background: $dark;
+    width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    background-image: url(../img/stars-game.svg);
+    background-size: 105% 94%;
+    background-repeat: no-repeat;
+    background-position: 582px 150px;
+
+    }
     .games-gallery {
         max-width: 1440px;
-        max-height: 3500px;
-        background-image: url('../img/game_gallery.jpeg');
-        background-repeat: no-repeat;
-        background-position: center; 
+        // max-height: 3500px;
         padding-bottom: 144px;
-        &__title {
+        .games-gallery__title {
             margin: 0;
             padding-top: 96px;
             padding-bottom: 72px;
@@ -184,7 +202,7 @@
             line-height: 78px;
             text-align: left;
         }
-        &__catalog {
+        .games-gallery__catalog {
             margin-bottom: 32px;
             display: grid;
             grid-template-columns: repeat(12, 1fr);
@@ -203,7 +221,7 @@
                 // flex-direction: column;
                 
 
-                &__title {
+                .catalog-item__title {
                     margin-top: 48px;
                     margin-bottom: 24px;
                     font-size: 48px;
@@ -211,14 +229,14 @@
                     line-height: 59px;
                     text-align: left;
                 }
-                &__subtitle {
+                .catalog-item__subtitle {
                     margin-bottom: 36px;
                     font-size: 24px;
                     font-weight: 400;
                     line-height: 32px;
                     text-align: left;
                 }
-                &__btn {
+                .catalog-item__btn {
                     @include btn-dark;
                     margin-bottom: 84px;
                 }
@@ -232,12 +250,12 @@
                     border-radius: 30px;
                     }
         }
-        &__catalog:nth-child(odd) .catalog-item{
+        .games-gallery__catalog:nth-child(odd) .catalog-item{
                 order: 1;
-        }
-        &__catalog:last-child {
-            margin-bottom: unset;
-        }
+            }
+            .games-gallery__catalog:last-child {
+                margin-bottom: unset;
+            }
             
             
         }
