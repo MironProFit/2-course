@@ -105,8 +105,8 @@
         max-width: unset;
        
         .catalog-item { 
-            margin-left: 28px;
-            margin-right: 28px;
+            margin-left: 14px;
+            margin-right: 14px;
             grid-row: span 1;
             padding: 0;
             display: flex;
@@ -137,7 +137,6 @@
             .catalog-img {
                 grid-row: span 1;
                 height: 284px;
-                // width: 100%;
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
