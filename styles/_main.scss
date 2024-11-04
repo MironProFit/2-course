@@ -82,7 +82,7 @@
 }
 .gams-conteiner {
     background: $dark;
-    width: 1440px;
+    max-width: 1440px;
     height: 100%;
     margin: 0 auto;
     background-image: url(../img/stars-about.svg);
@@ -93,7 +93,6 @@
 
 }
 .games-info {
-    max-width: 1440px;
 
     
     &__title {
@@ -179,7 +178,7 @@
     }
     .gallery-conteiner {
         background: $dark;
-    width: 1440px;
+    max-width: 1440px;
     height: 100%;
     margin: 0 auto;
     background-image: url(../img/stars-game.svg);
@@ -190,7 +189,6 @@
     }
     .games-gallery {
         max-width: 1440px;
-        // max-height: 3500px;
         padding-bottom: 144px;
         .games-gallery__title {
             margin: 0;
@@ -207,7 +205,6 @@
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             max-width: 1200px;
-            max-height: 500px;
             background-color: $light;
             border-radius: 30px;
             
@@ -217,8 +214,6 @@
                 padding-left: 48px;
                 padding-top: 48px;
                 grid-column: span 6;
-                // display: flex;
-                // flex-direction: column;
                 
 
                 .catalog-item__title {

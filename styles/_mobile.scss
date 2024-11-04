@@ -77,6 +77,10 @@
         }
     }
 }
+.gams-conteiner {
+    max-width: unset;
+
+}
 .games-gallery {
     max-width: unset;
     max-height: unset;
@@ -133,7 +137,7 @@
             .catalog-img {
                 grid-row: span 1;
                 height: 284px;
-                width: 100%;
+                // width: 100%;
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;

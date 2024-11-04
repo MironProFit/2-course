@@ -129,7 +129,7 @@
 
 .gams-conteiner {
   background: #202027;
-  width: 1440px;
+  max-width: 1440px;
   height: 100%;
   margin: 0 auto;
   background-image: url(../img/stars-about.svg);
@@ -138,9 +138,6 @@
   background-position: 32px -310px;
 }
 
-.games-info {
-  max-width: 1440px;
-}
 .games-info__title {
   margin: 0;
   padding-top: 94px;
@@ -223,7 +220,7 @@
 
 .gallery-conteiner {
   background: #202027;
-  width: 1440px;
+  max-width: 1440px;
   height: 100%;
   margin: 0 auto;
   background-image: url(../img/stars-game.svg);
@@ -251,7 +248,6 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   max-width: 1200px;
-  max-height: 500px;
   background-color: #fff;
   border-radius: 30px;
 }
@@ -444,6 +440,9 @@ body a {
   }
 }
 @media (max-width: 768px) {
+  .gams-conteiner {
+    max-width: unset;
+  }
   .games-gallery {
     max-width: unset;
     max-height: unset;
@@ -521,7 +520,6 @@ body a {
   .games-gallery .games-gallery__catalog .catalog-img {
     grid-row: span 1;
     height: 284px;
-    width: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -532,5 +530,17 @@ body a {
   }
   .games-gallery .games-gallery__catalog:last-child {
     padding-bottom: 24px;
+  }
+}
+@media (max-width: 1440px) {
+  .center {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .gams-conteiner {
+    max-width: unset;
+  }
+  .gallery-conteiner {
+    width: unset;
   }
 }/*# sourceMappingURL=styles.css.map */
