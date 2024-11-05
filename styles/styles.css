@@ -70,9 +70,11 @@
   width: 247px;
   height: 66px;
 }
-.header__hero .hero__button:hover {
-  background-color: #fff;
-  color: #202027;
+@media (hover: hover) {
+  .header__hero .hero__button:hover {
+    background-color: #fff;
+    color: #202027;
+  }
 }
 @media (max-width: 768px) {
   .header__hero .hero__button {
@@ -183,8 +185,10 @@
   border-radius: 30px;
   transition: 0.5s;
 }
-.games-info .games-list .games-item:hover {
-  transform: scale(1.1);
+@media (hover: hover) {
+  .games-info .games-list .games-item:hover {
+    transform: scale(1.1);
+  }
 }
 .games-info .games-list .games-item__img {
   border-radius: 30px;
@@ -283,9 +287,11 @@
   height: 66px;
   margin-bottom: 84px;
 }
-.games-gallery .games-gallery__catalog .catalog-item .catalog-item__btn:hover {
-  background-color: #fff;
-  color: #202027;
+@media (hover: hover) {
+  .games-gallery .games-gallery__catalog .catalog-item .catalog-item__btn:hover {
+    background-color: #fff;
+    color: #202027;
+  }
 }
 @media (max-width: 768px) {
   .games-gallery .games-gallery__catalog .catalog-item .catalog-item__btn {
@@ -425,6 +431,8 @@ body a {
     width: 247px;
     height: 66px;
   }
+}
+@media (max-width: 768px) and (hover: hover) {
   .header__hero .hero__button:hover {
     background-color: #fff;
     color: #202027;
@@ -502,6 +510,8 @@ body a {
     width: 247px;
     height: 66px;
   }
+}
+@media (max-width: 768px) and (hover: hover) {
   .games-gallery .games-gallery__catalog .catalog-item .catalog-item__btn:hover {
     background-color: #fff;
     color: #202027;
