@@ -2,11 +2,10 @@
     max-width: 100vw;
     max-height: 800px;
     background-color: $accent-light;
-    background-image: url('../img/star-header.svg');
+    background-image: url('../img/stars-header-big.svg'), url('../img/stars-header-group-1.svg'), url('../img/stars-header-group-2.svg');
     background-repeat: no-repeat;
-    background-position: clamp(42%, 2vw, 100%);
-    background-size: clamp(162%, 2vw, 100%) clamp(145%, 2vw, 100%);
-
+    background-position: 66% 91%, 35% 18%, 47% 79%;
+    background-size: 33%, 4%, 4%;
 }
 .header__hero {
     padding-top: 196px;
@@ -87,11 +86,10 @@
     max-width: 100vw;
     height: 100%;
     margin: 0 auto;
-    background-image: url(../img/stars-about.svg);
-    background-size: 105% 63%;
     background-repeat: no-repeat;
-    // background-position: 32px -310px;
-    
+    background-image: url(../img/stars-big.svg), url(../img/star-game-info.svg);
+    background-size: 20vw, 3vw;
+    background-position: 53vw 0vw, 29vw 20vw;
 
 }
 .games-info {
