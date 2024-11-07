@@ -8,15 +8,28 @@
     font-weight: 600;
     width: 247px;
     height: 66px;
-    &:hover {
+    @media (hover: hover) {
+       &:hover {
         background-color: $light;
         color: $dark;
+    } 
+    }
+    
+    @media (max-width: 768px) {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 141.69%;
+        max-width: 285px;
+        height: 55px;
     }
 }
 @mixin anim-scale {
     transition: 0.5s;
+    @media (hover: hover) {
     &:hover {
         transform: scale(1.1);
 
     }
+}
+        
 }
