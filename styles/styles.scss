@@ -1,0 +1,30 @@
+@import 'font';
+@import 'mixin';
+@import 'variables';
+@import 'button_variables';
+@import 'main';
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    a {
+        text-decoration: none;
+        color: $dark;
+    }
+}
+
+.center {
+    padding-right: calc(50% - 600px);
+    padding-left: calc(50% - 600px);
+}
+
+@import 'mobile';
+@import 'tablet';

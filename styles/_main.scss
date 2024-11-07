@@ -1,0 +1,280 @@
+.header {
+    max-width: 100vw;
+    max-height: 800px;
+    background-color: $accent-light;
+    background-image: url('../img/stars-header-big.svg'), url('../img/stars-header-group-1.svg'), url('../img/stars-header-group-2.svg');
+    background-repeat: no-repeat;
+    background-position: 66% 91%, 35% 18%, 47% 79%;
+    background-size: 33%, 4%, 4%;
+}
+.header__hero {
+    padding-top: 196px;
+    max-width: 769px;
+    height: 750px;
+    .hero {
+        &__title {
+            margin: 0;
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 78px;
+            padding-bottom: 24px;
+            }
+
+        &__desc {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 32px;
+            padding-bottom: 48px;
+                &-selection {
+                    font-weight: 600;
+                }
+            }
+        &__button {
+            margin-bottom: 156px;
+            @include btn-dark;
+        }
+    }
+}
+
+.tag {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    gap: 138px;
+    animation: move-left 30s infinite linear;
+    
+    &__wrapper {
+        background-color: $accent-dark;
+        max-width: 100vw;
+        height: 90px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+&__text {
+    width: 100%;
+    position: relative;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 110%;
+    white-space: nowrap;
+    text-transform: uppercase;
+    &::before {
+        position: absolute;
+        content: '';
+        background-image: url(../img/star.svg);
+        width: 36px;
+        height: 36px;
+        top: 0;
+        left: -82px;
+    }
+}
+@keyframes move-left {
+    0% {
+        transform: translate(100%, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+    
+}
+}
+.gams-conteiner {
+    background: $dark;
+    max-width: 100vw;
+    height: 100%;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-image: url(../img/stars-big.svg), url(../img/star-game-info.svg);
+    background-size: 20vw, 3vw;
+    background-position: 53vw 0vw, 29vw 20vw;
+
+}
+.games-info {
+
+    
+    &__title {
+        margin: 0;
+        padding-top: 94px;
+        padding-bottom: 24px;
+        color: $light;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 78px;
+        text-align: left;
+    }
+    &__subtitle {
+        margin: 0;
+        width: 788px;
+        padding-bottom: 72px;
+        color: $light;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        text-align: left;
+    }
+        .games-list {
+            max-height: 1060px;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(24, 1fr);
+            gap: 32px;
+            .item-5 {
+                order: 5;
+            }
+            .big-item {
+                grid-row: span 12;
+            }
+            .small-item {
+                grid-row: span 11;
+            }
+            .games-item {
+                display: flex;
+                flex-direction: column;
+                grid-column: span 4;
+                background-color: $light;
+                border-radius: 30px;
+                 @include anim-scale;
+
+                &__img {
+                    border-radius: 30px;
+                    border-radius: 30px;
+                    height: 314px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                
+
+                &__num {
+                    width: 110px;
+                    height: 36px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 52.58px;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 110%;
+                    text-align: left;
+                    background-color: $dark-light;
+                    margin-top:32px;
+                    margin-left: 32px;
+                    margin-bottom: 16px;
+                }
+                &__title {
+                    padding: 0 36px 32px;
+                    font-size: 32px;
+                    font-weight: 700;
+                    line-height: 39px;
+                    text-align: left;
+                }
+            }
+
+        }
+    }
+    .gallery-conteiner {
+        background: $dark;
+    max-width: 100vw;
+    height: 100%;
+    margin: 0 auto;
+    background-image: url(../img/stars-game.svg);
+    background-size: 105% 94%;
+    background-repeat: no-repeat;
+    background-position: 582px 150px;
+
+    }
+    .games-gallery {
+        max-width: 100vw;
+        padding-bottom: 144px;
+        .games-gallery__title {
+            margin: 0;
+            padding-top: 96px;
+            padding-bottom: 72px;
+            color: $light;
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 78px;
+            text-align: left;
+        }
+        .games-gallery__catalog {
+            margin-bottom: 32px;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            max-width: 1200px;
+            background-color: $light;
+            border-radius: 30px;
+            
+            
+           
+            .catalog-item { 
+                padding-left: 48px;
+                padding-top: 48px;
+                grid-column: span 6;
+                
+
+                .catalog-item__title {
+                    margin-top: 48px;
+                    margin-bottom: 24px;
+                    font-size: 48px;
+                    font-weight: 700;
+                    line-height: 59px;
+                    text-align: left;
+                }
+                .catalog-item__subtitle {
+                    margin-bottom: 36px;
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: 32px;
+                    text-align: left;
+                }
+                .catalog-item__btn {
+                    @include btn-dark;
+                    margin-bottom: 84px;
+                }
+            }
+                .catalog-img {
+                    display: flex;
+                    grid-column: span 6;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 30px;
+                    }
+        }
+        .games-gallery__catalog:nth-child(odd) .catalog-item{
+                order: 1;
+            }
+            .games-gallery__catalog:last-child {
+                margin-bottom: unset;
+            }
+            
+            
+        }
+
+.footer {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: $accent-dark;
+    max-width: 100vw;
+    height: 150px;
+    &__text {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29px;
+        text-align: center;
+
+    }
+}
+    
+   
+    
+    
+   
+
+

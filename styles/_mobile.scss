@@ -1,0 +1,154 @@
+@media (max-width: 768px) {
+    body { 
+        overflow-x: hidden;
+    
+}
+
+.center {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+    
+.header {
+    max-width: 100vw;
+    max-height: 649px;
+    background-position: 45vw -29vw, 11% 11%, 90% 94%;
+    background-size: 97%, 20%, 20%;
+}
+.tag {
+    height: 51px;
+    &__wrapper {
+        height: 51px;
+    }
+    &__text {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 110%;
+        &::before {
+            background-size: cover;
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+.games-info {
+    display: none;
+}    
+
+.header__hero {
+    padding-top: 147px;
+    max-width: 769px;
+    max-height: 610px;
+    display: flex;
+    flex-direction: column;
+    .hero {
+        &__title {
+            margin: 0 auto;
+            width: 262px;
+            height: 196px;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 49px;
+            text-align: center;
+            }
+
+        &__desc {
+            margin: 0 auto;
+            width: 296px;
+            height: 60px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: center;
+            padding-bottom: 38px;
+                &-selection {
+                    font-weight: 600;
+                }
+            }
+        &__button {
+            margin-bottom: 156px;
+            margin: 0 auto;
+            @include btn-dark;
+            
+
+
+        }
+    }
+}
+.gams-conteiner {
+    max-width: unset;
+
+}
+.games-gallery {
+    max-width: unset;
+    max-height: unset;
+    background-repeat: repeat-y;
+    background-position: center; 
+    padding-bottom: 48px;
+    
+    .games-gallery__title {
+        margin: 0;
+        padding-top: 48px;
+        padding-bottom: 48px;
+        color: $light;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 49px;
+        text-align: left;
+    }
+    .games-gallery__catalog {
+        margin-bottom: 24px;
+        grid-template-columns: unset;
+        max-height: unset;
+        max-width: unset;
+       
+        .catalog-item { 
+            margin-left: 14px;
+            margin-right: 14px;
+            grid-row: span 1;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+
+            .catalog-item__title {
+                margin-top: 30px;
+                margin-bottom: 16px;
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 39px;
+                text-align: left;
+            }
+            .catalog-item__subtitle {
+                margin-bottom: 32px;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20px;
+                text-align: left;
+            }
+            .catalog-item__btn {
+                margin: auto;
+                margin-bottom: 32px;
+                @include btn-dark;
+                
+            }
+        }
+            .catalog-img {
+                grid-row: span 1;
+                height: 284px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                border-radius: 30px;
+                }
+    }
+    .games-gallery__catalog .catalog-item{
+            order: 2;
+        }
+        .games-gallery__catalog:last-child {
+            padding-bottom: 24px;
+
+        }
+        
+    }
+
+}
