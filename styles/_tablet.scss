@@ -1,3 +1,10 @@
+@media (max-width: 1220px) {
+    .center {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
 @media (min-width: 787px) and (max-width: 1440px) {
     
     .header {
@@ -15,5 +22,5 @@
     .gallery-conteiner {
     width: unset;
     }
-
+   
 }
