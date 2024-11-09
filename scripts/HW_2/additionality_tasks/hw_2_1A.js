@@ -2,8 +2,12 @@ let userInput = prompt("Пожалуйста, введите любое числ
 
 let numberInput = Number(userInput);
 
-if (typeof numberInput === 'number' && !isNaN(numberInput)) {
-    (numberInput % 2 === 0) ? alert(`Число ${numberInput} четное`) : alert(`Число ${numberInput} нечетное`);
+if (!isNaN(numberInput)) {
+    if (numberInput % 2 === 0) {
+        alert(`Число ${numberInput} четное`);
+    } else { 
+        alert(`Число ${numberInput} нечетное`);
+}
 } else {
     alert("Введенное вами значение не является числом"); 
 }

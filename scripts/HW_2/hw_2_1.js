@@ -2,5 +2,9 @@ let password = 'Q1234';
 
 let userInput = prompt('Введите пароль');
 
-(userInput === password) ? alert("Пароль введен верно") : alert("Пароль введен не правильно");
+if (userInput === password) {
+    alert("Пароль введен верно");
+ } else {
+     alert("Пароль введен не правильно");
+ }
 
