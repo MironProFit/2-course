@@ -1,5 +1,5 @@
 let user = {
-    name : String (Мирон),
-    age : Number (35),
-    isAdmin : Boolean (true)
+    name : (Мирон),
+    age : (35),
+    isAdmin : (true)
 }
