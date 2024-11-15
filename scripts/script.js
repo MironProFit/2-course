@@ -1,12 +1,34 @@
-const randomNumber = Math.floor( Math.random() * 100 ) + 1;
+function startGame1() {
+    
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
+    // console.log(`Загаданные числа: ${randomNumber}`);
 
-let userNumber = 0;
-let attemps = 0;
+    let userGuess;
+    let attempts = 0;
 
-function userNumber() {
-    userNumber = parseInt(prompt("Угадайте число от 1 до 100:"));
+    while (true) {
+        userGuess = prompt("Введите ваше число");
+        if (userGuess === null) {
+            console.log("Игра остановлена! До свидания!" );
+            return;
+        }
 
-    if (isNaN(userNumber) || userNumber < 1 || userNumber > 100) {
-        alert("Пожалуйста, введите число от 1 до 100.");
+        userGuess = parseInt(userGuess);
+        attempts++;
+
+        if (isNaN(userGuess)) {
+            console.log("Введите корректное значение!");
+            attempts--;
+            continue;
+        }
+
+        if (userGuess < randomNumber) {
+            console.log("Больше!");
+        } else if (userGuess > randomNumber) {
+            console.log("Меньше!");
+        } else {
+            console.log(`Поздравляем! Вы угадали число ${randomNumber} за ${attempts} попыток`);
+            break;
+        }
     }
 }
