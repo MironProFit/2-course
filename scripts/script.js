@@ -33,9 +33,44 @@ function startGame1() {
     }
 }
 
+
+
 function startGame2() {
-    function name(params) {
-        
+    function generateRandomTask() {
+        const operations = [
+            {symbol: '+', func: (a, b) => a + b},
+            {symbol: '-', func: (a, b) => a - b},
+            {symbol: '*', func: (a, b) => a * b},
+            {symbol: '/', func: (a, b) => a / b},
+        ];
+
+        const randomOperator = operations[Math.floor(Math.random() * operations.length)];
+
+        const num1 = Math.floor(Math.random() * 10) + 1; 
+        const num2 = Math.floor(Math.random() * 10) + 1; 
+
+        let task;
+        if (randomOperator.symbol === '/') {
+            task = `${num1 * num2} ${randomOperator.symbol} ${num2}`;
+        } else {
+            task = `${num1} ${randomOperator.symbol} ${num2}`;
+        }
+
+        const correctAnswer = randomOperator.func(num1, num2);
+
+        return { task, correctAnswer };
+
     }
     
+    function checkUserAnswer() {
+        const {task, correctAnswer} = generateRandomTask();
+        const userAnswer = parseFloat(prompt(`Решите задачу: ${task}`)); // исправлено на prompt
+
+        if (userAnswer === correctAnswer) {
+            alert(`Правильный ответ!`);
+        } else {
+            alert(`Неправильный ответ! Правильный ответ: ${correctAnswer}`);
+        }
+    }
+    checkUserAnswer();
 }
