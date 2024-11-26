@@ -32,3 +32,10 @@ function startGame1() {
         }
     }
 }
+
+function startGame2() {
+    function name(params) {
+        
+    }
+    
+}
