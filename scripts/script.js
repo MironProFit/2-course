@@ -52,11 +52,13 @@ function startGame2() {
         let task;
         if (randomOperator.symbol === '/') {
             task = `${num1 * num2} ${randomOperator.symbol} ${num2}`;
+            correctAnswer = num1;
+
         } else {
             task = `${num1} ${randomOperator.symbol} ${num2}`;
+            const correctAnswer = randomOperator.func(num1, num2);
         }
 
-        const correctAnswer = randomOperator.func(num1, num2);
 
         return { task, correctAnswer };
 
@@ -73,4 +75,58 @@ function startGame2() {
         }
     }
     checkUserAnswer();
+}
+
+function startGame3() {
+    const userWord = prompt("Введите слово!");
+
+    if (userWord) {
+        const reversedWord = userWord.split('').reverse().join('');
+        alert(`Перевернутое слово: ${reversedWord}`);
+    } else {
+        alert("Вы не ввели слово.")
+    }
+
+}
+
+function startGame4() {
+    
+    const quiz = [
+        {
+            question: "Какой цвет небо?",
+            options: ["1. Красный", "2. Синий", "3. Зеленый"],
+            correctAnswer: 2 // номер правильного ответа
+        },
+        {
+            question: "Сколько дней в неделе?",
+            options: ["1. Шесть", "2. Семь", "3. Восемь"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько у человека пальцев на одной руке?",
+            options: ["1. Четыре", "2. Пять", "3. Шесть"],
+            correctAnswer: 2
+        }
+    ];
+    
+    let score = 0;
+
+    for (let i = 0; i < quiz.length; i++) {
+
+        const q = quiz[i];
+
+        let questionText = q.question + "\n";
+        
+        for (let j = 0; j < q.options.length; j++) {
+            
+            questionText += q.options[j] + "\n"
+        }
+        const userAnswer = prompt(questionText + "Введите вариант с правильным ответом");
+        
+        if (parseInt(userAnswer) === q.correctAnswer) {
+            
+            score++
+        }
+        alert(`Вы ответили правильно на ${score} вопросов из ${quiz.length}`)
+    }
 }
