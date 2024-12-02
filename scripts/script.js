@@ -50,13 +50,15 @@ function startGame2() {
         const num2 = Math.floor(Math.random() * 10) + 1; 
 
         let task;
+        let correctAnswer;
+
         if (randomOperator.symbol === '/') {
             task = `${num1 * num2} ${randomOperator.symbol} ${num2}`;
+            correctAnswer = num1;
         } else {
             task = `${num1} ${randomOperator.symbol} ${num2}`;
+            correctAnswer = randomOperator.func(num1, num2);
         }
-
-        const correctAnswer = randomOperator.func(num1, num2);
 
         return { task, correctAnswer };
 
@@ -64,7 +66,7 @@ function startGame2() {
     
     function checkUserAnswer() {
         const {task, correctAnswer} = generateRandomTask();
-        const userAnswer = parseFloat(prompt(`Решите задачу: ${task}`)); // исправлено на prompt
+        const userAnswer = parseFloat(prompt(`Решите задачу: ${task}`));
 
         if (userAnswer === correctAnswer) {
             alert(`Правильный ответ!`);
