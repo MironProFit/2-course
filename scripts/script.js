@@ -112,19 +112,16 @@ function startGame4() {
     let score = 0;
 
     for (let i = 0; i < quiz.length; i++) {
-
         const q = quiz[i];
-
         let questionText = q.question + "\n";
         
         for (let j = 0; j < q.options.length; j++) {
-            
             questionText += q.options[j] + "\n"
         }
+
         const userAnswer = prompt(questionText + "Введите вариант с правильным ответом");
         
         if (parseInt(userAnswer) === q.correctAnswer) {
-            
             score++
         }
         alert(`Вы ответили правильно на ${score} вопросов из ${quiz.length}`)
