@@ -1,3 +1,5 @@
+// Игра 1
+
 function startGame1() {
     
     const randomNumber = Math.floor(Math.random() * 100) + 1;
@@ -33,7 +35,7 @@ function startGame1() {
     }
 }
 
-
+// Игра 2
 
 function startGame2() {
     function generateRandomTask() {
@@ -77,6 +79,8 @@ function startGame2() {
     checkUserAnswer();
 }
 
+// Игра 3
+
 function startGame3() {
     const userWord = prompt("Введите слово!");
 
@@ -88,6 +92,8 @@ function startGame3() {
     }
 
 }
+
+// Игра 4
 
 function startGame4() {
     
@@ -126,4 +132,43 @@ function startGame4() {
         }
         alert(`Вы ответили правильно на ${score} вопросов из ${quiz.length}`)
     }
+}
+
+// Игра 5
+
+
+function startGame5() {
+    const choises = ["камень","ножницы","бумага"];
+    const userChoise = prompt("Введите ваш выбор").toLowerCase();
+
+    if (!choises.includes(userChoise)) {
+        console.log("Неправильный выбор");
+        return;
+    }
+    const computerChoise = choises[Math.floor(Math.random() * choises.length)];
+
+    let result;
+
+    if (userChoise === computerChoise) {
+        result = "Ничья!";
+    } else if (
+        (userChoise === "камень" && computerChoise === "ножницы") || (userChoise === "ножницы" && computerChoise === "бумага") || (userChoise === "бумага" && computerChoise === "камень"
+    ) {
+        result = "Вы победили!";
+    } else {
+        result = "Вы проиграли!";
+    }
+    console.log(`Ваш выбор ${userChoise}`);
+    console.log(`Компьютер выбрал ${computerChoise}`);
+    console.log(result);
+
+}
+        
+    
+
+
+// Игра 6
+
+function startGame6() {
+
 }
