@@ -163,12 +163,34 @@ function startGame5() {
     console.log(result);
 
 }
-        
-    
 
 
 // Игра 6
 
-function startGame6() {
+const playButton = document.getElementById('game_6');
+let changeBackgroundButton;
 
-}
+playButton.addEventListener('click', () => {
+
+    if (!changeBackgroundButton) {
+
+        changeBackgroundButton = document.createElement('button');
+        
+        changeBackgroundButton.textContent = 'Сменить фон';
+        
+        changeBackgroundButton.classList.add('catalog-item__btn');
+    }
+
+
+    playButton.insertAdjacentElement('beforeend', changeBackgroundButton);
+
+    changeBackgroundButton.addEventListener('click', () => {
+
+        const galleryConteiner = document.querySelector('.gallery-conteiner');
+
+        const randomColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+
+        galleryConteiner.style.backgroundColor = randomColor;
+
+    });
+})
