@@ -139,10 +139,10 @@ function startGame4() {
 
 function startGame5() {
     const choises = ["камень","ножницы","бумага"];
-    const userChoise = prompt("Введите ваш выбор").toLowerCase();
+    const userChoise = prompt("Введите ваш выбор: камень, ножницы, бумага").toLowerCase();
 
     if (!choises.includes(userChoise)) {
-        console.log("Неправильный выбор");
+        console.log("Неправильный выбор. Попробуйте еще раз!");
         return;
     }
     const computerChoise = choises[Math.floor(Math.random() * choises.length)];
@@ -152,14 +152,14 @@ function startGame5() {
     if (userChoise === computerChoise) {
         result = "Ничья!";
     } else if (
-        (userChoise === "камень" && computerChoise === "ножницы") || (userChoise === "ножницы" && computerChoise === "бумага") || (userChoise === "бумага" && computerChoise === "камень"
+        (userChoise === "камень" && computerChoise === "ножницы") || (userChoise === "ножницы" && computerChoise === "бумага") || (userChoise === "бумага" && computerChoise === "камень")
     ) {
         result = "Вы победили!";
     } else {
         result = "Вы проиграли!";
     }
-    console.log(`Ваш выбор ${userChoise}`);
-    console.log(`Компьютер выбрал ${computerChoise}`);
+    console.log(`Ваш выбор: ${userChoise}`);
+    console.log(`Компьютер выбрал: ${computerChoise}`);
     console.log(result);
 
 }
