@@ -35,7 +35,7 @@ function startGame1() {
     }
 }
 
-// Игра 2 Простая 
+// Игра 2 Простая арифметика
 
 function startGame2() {
     function generateRandomTask() {
@@ -61,7 +61,7 @@ function startGame2() {
 
         } else {
             task = `${num1} ${randomOperator.symbol} ${num2}`;
-            const correctAnswer = randomOperator.func(num1, num2);
+            correctAnswer = randomOperator.func(num1, num2);
         }
 
 
