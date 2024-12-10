@@ -130,8 +130,8 @@ function startGame4() {
         if (parseInt(userAnswer) === q.correctAnswer) {
             score++
         }
-        alert(`Вы ответили правильно на ${score} вопросов из ${quiz.length}`)
     }
+    alert(`Вы ответили правильно на ${score} вопросов из ${quiz.length}`)
 }
 
 // Игра 5
@@ -158,9 +158,7 @@ function startGame5() {
     } else {
         result = "Вы проиграли!";
     }
-    console.log(`Ваш выбор: ${userChoise}`);
-    console.log(`Компьютер выбрал: ${computerChoise}`);
-    console.log(result);
+    alert(`Ваш выбор: ${userChoise},\nКомпьютер выбрал: ${computerChoise}, \n${result}`);
 
 }
 
