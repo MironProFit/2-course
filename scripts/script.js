@@ -35,7 +35,7 @@ function startGame1() {
     }
 }
 
-// Игра 2
+// Игра 2 Простая 
 
 function startGame2() {
     function generateRandomTask() {
