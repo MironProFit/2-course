@@ -133,8 +133,8 @@ function startGame4() {
         if (parseInt(userAnswer) === q.correctAnswer) {
             score++
         }
-        alert(`Вы ответили правильно на ${score} вопросов из ${quiz.length}`)
     }
+    alert(`Вы ответили правильно на ${score} вопросов из ${quiz.length}`)
 }
 
 // Игра 5
@@ -161,17 +161,37 @@ function startGame5() {
     } else {
         result = "Вы проиграли!";
     }
-    console.log(`Ваш выбор: ${userChoise}`);
-    console.log(`Компьютер выбрал: ${computerChoise}`);
-    console.log(result);
+    alert(`Ваш выбор: ${userChoise},\nКомпьютер выбрал: ${computerChoise}, \n${result}`);
 
 }
-        
-    
 
 
 // Игра 6
 
-function startGame6() {
+const playButton = document.getElementById('game_6');
+let changeBackgroundButton;
 
-}
+playButton.addEventListener('click', () => {
+
+    if (!changeBackgroundButton) {
+
+        changeBackgroundButton = document.createElement('button');
+        
+        changeBackgroundButton.textContent = 'Сменить фон';
+        
+        changeBackgroundButton.classList.add('catalog-item__btn');
+    }
+
+
+    playButton.insertAdjacentElement('beforeend', changeBackgroundButton);
+
+    changeBackgroundButton.addEventListener('click', () => {
+
+        const galleryConteiner = document.querySelector('.gallery-conteiner');
+
+        const randomColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+
+        galleryConteiner.style.backgroundColor = randomColor;
+
+    });
+})
