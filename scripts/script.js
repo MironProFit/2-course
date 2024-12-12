@@ -1,4 +1,4 @@
-// Игра 1
+// Игра 1 Угадай число
 
 function startGame1() {
     
@@ -10,17 +10,17 @@ function startGame1() {
 
     while (true) {
         userGuess = prompt("Введите ваше число");
+
         if (userGuess === null) {
+
             console.log("Игра остановлена! До свидания!" );
             return;
         }
 
         userGuess = parseInt(userGuess);
-        attempts++;
 
         if (isNaN(userGuess)) {
             console.log("Введите корректное значение!");
-            attempts--;
             continue;
         }
 
@@ -82,7 +82,7 @@ function startGame2() {
     checkUserAnswer();
 }
 
-// Игра 3
+// Игра 3 Переверни текст
 
 function startGame3() {
     const userWord = prompt("Введите слово!");
@@ -96,7 +96,7 @@ function startGame3() {
 
 }
 
-// Игра 4
+// Игра 4 Викторина
 
 function startGame4() {
     
@@ -137,7 +137,7 @@ function startGame4() {
     alert(`Вы ответили правильно на ${score} вопросов из ${quiz.length}`)
 }
 
-// Игра 5
+// Игра 5 Камень, ножницы, бумага
 
 
 function startGame5() {
@@ -166,7 +166,8 @@ function startGame5() {
 }
 
 
-// Игра 6
+// Игра 6 Генератор случайного цвета
+
 const backgroundDefault = getComputedStyle(document.documentElement).getPropertyValue('--dark').trim();
 const playButton = document.getElementById('game_6');
 let changeBackgroundButton;
