@@ -3,7 +3,7 @@
 function startGame1() {
     
     const randomNumber = Math.floor(Math.random() * 100) + 1;
-    console.log(`Загаданные числа: ${randomNumber}`);
+    // console.log(`Загаданные числа: ${randomNumber}`);
 
     let userGuess;
     let attempts = 0;
