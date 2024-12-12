@@ -21,6 +21,7 @@ function startGame1() {
 
         if (isNaN(userGuess)) {
             console.log("Введите корректное значение!");
+            attempts++;
             continue;
         }
 
