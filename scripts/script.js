@@ -27,11 +27,11 @@ function startGame1() {
         }
 
         if (userGuess < randomNumber) {
-            console.log("Больше!");
+            alert("Больше!");
         } else if (userGuess > randomNumber) {
-            console.log("Меньше!");
+            alert("Меньше!");
         } else {
-            console.log(`Поздравляем! Вы угадали число ${randomNumber} за ${attempts} попыток`);
+            alert(`Поздравляем! Вы угадали число ${randomNumber} за ${attempts} попыток`);
             break;
         }
     }
@@ -134,7 +134,9 @@ function startGame4() {
         
         if (parseInt(userAnswer) === q.correctAnswer) {
             score++
-        }
+        } 
+            alert(`Правильный ответ: ${q.correctAnswer}, ${q.options[q.correctAnswer - 1]}`);
+        
     }
     alert(`Вы ответили правильно на ${score} вопросов из ${quiz.length}`)
 }
