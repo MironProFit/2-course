@@ -1,4 +1,4 @@
-// Игра 1
+// Игра 1 Угадай число
 
 function startGame1() {
     
@@ -9,8 +9,10 @@ function startGame1() {
     let attempts = 0;
 
     while (true) {
-        userGuess = prompt("Введите ваше число");
+        userGuess = prompt("Введите ваше число от 1 до 100");
+
         if (userGuess === null) {
+
             console.log("Игра остановлена! До свидания!" );
             return;
         }
@@ -25,17 +27,17 @@ function startGame1() {
         }
 
         if (userGuess < randomNumber) {
-            console.log("Больше!");
+            alert("Больше!");
         } else if (userGuess > randomNumber) {
-            console.log("Меньше!");
+            alert("Меньше!");
         } else {
-            console.log(`Поздравляем! Вы угадали число ${randomNumber} за ${attempts} попыток`);
+            alert(`Поздравляем! Вы угадали число ${randomNumber} за ${attempts} попыток`);
             break;
         }
     }
 }
 
-// Игра 2
+// Игра 2 Простая арифметика
 
 function startGame2() {
     function generateRandomTask() {
@@ -61,7 +63,7 @@ function startGame2() {
 
         } else {
             task = `${num1} ${randomOperator.symbol} ${num2}`;
-            const correctAnswer = randomOperator.func(num1, num2);
+            correctAnswer = randomOperator.func(num1, num2);
         }
 
 
@@ -82,7 +84,7 @@ function startGame2() {
     checkUserAnswer();
 }
 
-// Игра 3
+// Игра 3 Переверни текст
 
 function startGame3() {
     const userWord = prompt("Введите слово!");
@@ -96,9 +98,36 @@ function startGame3() {
 
 }
 
-// Игра 4
+// Игра 4 Камень, ножницы, бумага
+
 
 function startGame4() {
+    const choises = ["камень","ножницы","бумага"];
+    const userChoise = prompt("Введите ваш выбор: камень, ножницы, бумага").toLowerCase();
+
+    if (!choises.includes(userChoise)) {
+        console.log("Неправильный выбор. Попробуйте еще раз!");
+        return;
+    }
+    const computerChoise = choises[Math.floor(Math.random() * choises.length)];
+
+    let result;
+
+    if (userChoise === computerChoise) {
+        result = "Ничья!";
+    } else if (
+        (userChoise === "камень" && computerChoise === "ножницы") || (userChoise === "ножницы" && computerChoise === "бумага") || (userChoise === "бумага" && computerChoise === "камень")
+    ) {
+        result = "Вы победили!";
+    } else {
+        result = "Вы проиграли!";
+    }
+    alert(`Ваш выбор: ${userChoise},\nКомпьютер выбрал: ${computerChoise}, \n${result}`);
+
+}
+// Игра 5 Викторина
+
+function startGame5() {
     
     const quiz = [
         {
@@ -132,66 +161,49 @@ function startGame4() {
         
         if (parseInt(userAnswer) === q.correctAnswer) {
             score++
-        }
+        } 
+            alert(`Правильный ответ: ${q.correctAnswer}, ${q.options[q.correctAnswer - 1]}`);
+        
     }
     alert(`Вы ответили правильно на ${score} вопросов из ${quiz.length}`)
 }
 
-// Игра 5
 
 
-function startGame5() {
-    const choises = ["камень","ножницы","бумага"];
-    const userChoise = prompt("Введите ваш выбор: камень, ножницы, бумага").toLowerCase();
+// Игра 6 Генератор случайного цвета
 
-    if (!choises.includes(userChoise)) {
-        console.log("Неправильный выбор. Попробуйте еще раз!");
-        return;
-    }
-    const computerChoise = choises[Math.floor(Math.random() * choises.length)];
-
-    let result;
-
-    if (userChoise === computerChoise) {
-        result = "Ничья!";
-    } else if (
-        (userChoise === "камень" && computerChoise === "ножницы") || (userChoise === "ножницы" && computerChoise === "бумага") || (userChoise === "бумага" && computerChoise === "камень")
-    ) {
-        result = "Вы победили!";
-    } else {
-        result = "Вы проиграли!";
-    }
-    alert(`Ваш выбор: ${userChoise},\nКомпьютер выбрал: ${computerChoise}, \n${result}`);
-
-}
-
-
-// Игра 6
-
+const backgroundDefault = getComputedStyle(document.documentElement).getPropertyValue('--dark').trim();
 const playButton = document.getElementById('game_6');
 let changeBackgroundButton;
 
 playButton.addEventListener('click', () => {
 
-    if (!changeBackgroundButton) {
+    const galleryConteiner = document.querySelector('.gallery-conteiner');
+
+    if (changeBackgroundButton) {
+
+        changeBackgroundButton.remove();
+        changeBackgroundButton = null;
+        galleryConteiner.style.backgroundColor = backgroundDefault;
+
+    } else {
 
         changeBackgroundButton = document.createElement('button');
-        
         changeBackgroundButton.textContent = 'Сменить фон';
-        
         changeBackgroundButton.classList.add('catalog-item__btn');
-    }
+        
+
 
 
     playButton.insertAdjacentElement('beforeend', changeBackgroundButton);
 
     changeBackgroundButton.addEventListener('click', () => {
 
-        const galleryConteiner = document.querySelector('.gallery-conteiner');
-
+        event.stopPropagation();
         const randomColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-
         galleryConteiner.style.backgroundColor = randomColor;
+        
 
-    });
-})
+       });
+    }
+});

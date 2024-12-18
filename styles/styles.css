@@ -5,6 +5,10 @@
   font-style: normal;
 }
 
+:root {
+  --dark: #202027;
+}
+
 .item_1 {
   background-image: url(../img/game_1.jpg);
 }
